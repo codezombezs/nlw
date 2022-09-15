@@ -1,0 +1,181 @@
+/* Remove default browser config */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+
+/* Remove the list-points of image/link */
+
+ul{
+    list-style: none;
+}
+
+/* Background configuration + image*/
+
+body{
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+body * {
+    font-family: 'Inter', 'sans-serif';
+    line-height: 160%;
+}
+
+/* Center the main content */
+
+main * {
+    font-family: inter;
+}
+
+main{
+    max-width: 580px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    flex-direction: column;
+    gap: 24px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+    margin-top: 32px;
+}
+
+section div {
+    background-color: #2A2634;
+    padding:28px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section #Cinza01 {
+    color: #a1a1aa;
+    font-weight: 400;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p{  
+    font-size: 16px;
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+/* List and Display // Design */
+
+section ul {
+    display:  flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.game-list img {
+    border-radius: 8px;
+    width: 90px;
+}
+
+.game-list img:hover {
+    transform: scale(1.05   );
+    transition: transform .5s;
+}
+
+.streamers-list img {
+    border-radius: 50%;
+    border: #A1A1AA solid 1px;
+    width: 90px;
+}
+
+.streamers-list img:hover {
+    transform: scale(1.05   );
+    transition: transform .5s;
+}
+
+
+
+/* Header Img / Gradient config */
+
+header div:hover{
+    transform: scale(1.1);
+    transition: transform .3s;
+}
+
+header  img {
+    border-radius: 50%;
+    margin: auto;
+    flex: auto;
+    width: 120px;
+    height: 120px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding: 4px;
+    display: grid;
+    margin-top: 32px;
+}
+
+/* animation */
+
+header div {
+    animation: FromTop 2s backwards;
+}
+
+main section {
+    animation: Opacity 2s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .5s;
+}
+
+main section:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes FromTop {
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+@keyframes FromRight {
+    from{
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1  ;
+    }
+}
+
+@keyframes Opacity {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
