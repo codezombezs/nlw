@@ -13,6 +13,12 @@ ul{
     list-style: none;
 }
 
+body{
+
+    scrollbar-width: thin;
+    overflow-x: hidden;
+}
+
 /* Background configuration + image*/
 
 body{
@@ -38,7 +44,7 @@ main{
     max-width: 580px;
     width: 90%;
     margin: auto;
-    display: grid;
+    display: flex;
     flex-direction: column;
     gap: 24px;
 }
@@ -75,11 +81,24 @@ section p{
 
 /* List and Display // Design */
 
-section ul {
-    display:  flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 24px;
+        section ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+/* .game-list {
+    position: absolute;
+    left: 100px;
+} */
+
+/* games list config */
+
+.game-list  {
+    position: relative;
+    left: 300px;
+    top: -40px;
 }
 
 .game-list img {
@@ -88,8 +107,20 @@ section ul {
 }
 
 .game-list img:hover {
-    transform: scale(1.05   );
+    transform: scale(1.25   );
     transition: transform .5s;
+}
+
+/* streamer list config */
+
+/* .streamers-list div {
+    height: 300px;
+} */
+
+.streamers-list {
+    position: relative;
+    left: 300px;
+    top: -784px;
 }
 
 .streamers-list img {
@@ -103,7 +134,20 @@ section ul {
     transition: transform .5s;
 }
 
+/* social media config */
 
+.social-list {
+    position: relative;
+    top: -735px;
+    right: 300px;
+}
+
+/* who i am config */
+
+.Whoiam {
+    position: relative;
+    right: 300px;
+}
 
 /* Header Img / Gradient config */
 
@@ -124,26 +168,78 @@ header  img {
     margin-top: 32px;
 }
 
+/* rocket seat config img */
+
+.Discord {
+    position: relative;
+    margin: 32px;
+    bottom: -15px;
+    left: 20%;  
+}
+
+.Twitter {
+    position: relative;
+    margin: 32px;
+    bottom: -15px;
+    left: 15%;
+}
+
+.Twitch {
+    position: relative;
+    margin: 32px;
+    bottom: -15px;
+    left: 10%;
+}
+
+.Youtube {
+    position: relative;
+    margin: 32px;
+    bottom: -15px;
+    left: 5%;
+}
+
+.NLW {
+    position: relative;
+    right: 300px;
+    top: -730px;
+}
+
+.NLW img {
+    margin-top: 32px;
+    margin-left: 15px;
+    border-radius: 5%;
+    border: #9572FC solid 1px;
+}
+
+
+
+
+
+
 /* animation */
 
 header div {
     animation: FromTop 2s backwards;
 }
 
-main section {
-    animation: Opacity 2s backwards;
+main section:nth-child(1) { /* Whoiam */
+    animation: FromLeft 3s backwards;
 }
 
-main section:nth-child(1) {
-    animation-delay: 0;
+main section:nth-child(2) { /* games */
+    animation: FromRight 3s backwards;
 }
 
-main section:nth-child(2) {
-    animation-delay: .5s;
+main section:nth-child(3) { /* channels */
+    animation: FromRight 3s backwards;
 }
 
-main section:nth-child(3) {
-    animation-delay: 1s;
+main section:nth-child(4) { /* social media */
+    animation: FromLeft 3s backwards;
+}
+
+main section:nth-child(5) { /* rocketseat */
+    animation: FromLeft 3s backwards;
 }
 
 @keyframes FromTop {
@@ -166,6 +262,18 @@ main section:nth-child(3) {
 
     to{
         transform: translateX(0);
+        opacity: 1  ;
+    }
+}
+
+@keyframes FromLeft {
+    from{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0px);
         opacity: 1  ;
     }
 }
